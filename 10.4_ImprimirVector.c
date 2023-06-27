@@ -9,6 +9,7 @@ void imprime(int vetor[], int tamanho_vetor){
 
 int main(){
     int tamanho_vetor=0;
+    scanf("%d", &tamanho_vetor);
     int *Vector = (int*) malloc(tamanho_vetor*sizeof(int));
     for(int i=0; i<tamanho_vetor;i++){
     scanf("%d", &Vector[i]);
