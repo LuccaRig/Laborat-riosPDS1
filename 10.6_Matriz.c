@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 int** AlocarMatriz(int linha, int coluna){
-    int **matrix = (int**) malloc(linha*sizeof(int*));
+    int **matrix = NULL;
+    matrix = (int**) malloc(linha*sizeof(int*));
     for(int i=0;i<linha;i++){
         matrix[i] = (int*) malloc(coluna*sizeof(int));
         for(int j=0;j<coluna;j++){
@@ -32,7 +33,7 @@ void ImprimirMatriz(int** matrix, int linha, int coluna){
 int main(){
     int linha=0, coluna=0;
 
-    scanf("%d %d", linha, coluna);
+    scanf("%d\n%d", linha, coluna);
     int** matrix = AlocarMatriz(linha, coluna);
     ImprimirMatriz(matrix, linha, coluna);
     LiberarMatriz(matrix, linha);
